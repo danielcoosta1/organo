@@ -1,6 +1,8 @@
 import { FormularioLabel, FormularioSelect } from "./styles";
+import { useState } from "react";
 
 const ListaSupensa = ({ label, id, defaultValue = "", ...props }) => {
+  const [selectedValue, setSelectedValue] = useState(defaultValue);
   const timeOptions = [
     "Programação",
     "Front-End",
@@ -13,12 +15,15 @@ const ListaSupensa = ({ label, id, defaultValue = "", ...props }) => {
   return (
     <>
       <FormularioLabel htmlFor={id}>{label}</FormularioLabel>
-      <FormularioSelect id={id} defaultValue={defaultValue} required>
-        {/* Opção placeholder (vazia) */}
+      <FormularioSelect
+        id={id}
+        value={selectedValue}
+        onChange={(e) => setSelectedValue(e.target.value)}
+        required
+      >
         <option value="" disabled hidden>
-          {defaultValue || "Selecione..."}
+          {defaultValue || "Selecione"}
         </option>
-        {/* Opções da lista */}
         {timeOptions.map((option) => (
           <option key={option} value={option}>
             {option}

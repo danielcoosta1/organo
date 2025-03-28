@@ -20,10 +20,18 @@ const FormularioSelect = styled.select`
   font-size: 0.75rem;
 
   /* Estilo do select em si */
-  color: #afafaf; /* Cor do placeholder */
+  color: ${props => props.value === "" ? "#999" : "#000"};
 
   &:focus {
     color: black; /* Cor do texto selecionado */
+  }
+
+  option {
+    color: #000;
+  }
+
+  option[value=""][disabled] {
+    display: none;
   }
 
   @media screen and (max-width: 768px) {
