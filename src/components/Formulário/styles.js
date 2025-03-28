@@ -18,6 +18,11 @@ const FormularioContainer = styled.div`
     padding: 2rem;
     max-width: 30rem;
   }
+
+  @media screen and (max-width: 420px) {
+    padding: 3rem;
+    max-width: 15rem;
+  }
 `;
 
 const FormularioTitle = styled.h1`
@@ -27,6 +32,10 @@ const FormularioTitle = styled.h1`
   @media screen and (max-width: 768px) {
     font-size: 1rem;
   }
+  @media screen and (max-width: 420px) {
+    text-align: center;
+  }
+
 `;
 
 const FormularioForm = styled.form`
@@ -64,6 +73,13 @@ const FormularioButton = styled.button`
     font-size: 0.6rem;
     padding: 0.5rem 1rem;
   }
+
+  @media screen and (max-width: 420px) {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+
 `;
 
 export {

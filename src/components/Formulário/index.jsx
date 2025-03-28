@@ -8,20 +8,38 @@ import {
 import InputDefault from "../InputDefault";
 import ListaSupensa from "../ListaSupensa";
 
+import { useRef } from "react";
+
+
 const Formulario = () => {
+
+  const inputName = useRef();
+  const inputCargo = useRef();
+  const inputImagem = useRef();
+
+  
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(inputName.current.value);
+    console.log(inputCargo.current.value);
+    console.log(inputImagem.current.value)
+
+  };
+
   return (
     <FormularioContainer>
       <FormularioTitle>
         Preencha os dados para criar o card do colaborador
       </FormularioTitle>
-      <FormularioForm>
+      <FormularioForm onSubmit={handleSubmit}>
+      
         {/* Campo Nome */}
         <InputDefault
           label="Nome"
           id="nome"
           type="text"
           placeholder="Digite seu nome"
-          required
+          ref= {inputName}
         />
 
         {/* Campo Cargo */}
@@ -30,6 +48,8 @@ const Formulario = () => {
           id="cargo"
           type="text"
           placeholder="Digite seu cargo"
+          ref={inputCargo}
+          
         />
 
         {/* Campo Imagem*/}
@@ -38,6 +58,7 @@ const Formulario = () => {
           id="imagem"
           type="text"
           placeholder="Digite a URL da imagem"
+          ref={inputImagem}
         />
 
         {/* select */}
@@ -45,10 +66,12 @@ const Formulario = () => {
         <ListaSupensa
           label="Time"
           id="time"
-          defaultValue="Escolha seu time"
+          defaultValue=""
         ></ListaSupensa>
 
-        <FormularioButton>Criar card</FormularioButton>
+        {/* button */}
+
+        <FormularioButton type="submit">Criar card</FormularioButton>
       </FormularioForm>
     </FormularioContainer>
   );

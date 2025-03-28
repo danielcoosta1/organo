@@ -25,6 +25,10 @@ const FormularioInput = styled.input`
   @media screen and (max-width: 768px) {
     padding: 1rem 1.5rem;
   }
+
+  @media screen and (max-width: 420px) {
+   padding: 0.5rem 1rem;
+  }
 `;
 
 export { FormularioLabel, FormularioInput };
