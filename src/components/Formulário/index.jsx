@@ -3,11 +3,11 @@ import {
   FormularioTitle,
   FormularioForm,
   FormularioLabel,
-  FormularioInput,
   FormularioSelect,
   FormularioOption,
-  FormularioButton,
 } from "./styles";
+
+import InputDefault from "../InputDefault";
 
 const Formulario = () => {
   return (
@@ -16,20 +16,27 @@ const Formulario = () => {
         Preencha os dados para criar o card do colaborador
       </FormularioTitle>
       <FormularioForm>
-        <FormularioLabel htmlFor="nome">Nome</FormularioLabel>
-        <FormularioInput type="text" id="nome" placeholder="Digite seu nome" />
-        <FormularioLabel htmlFor="cargo">Cargo</FormularioLabel>
-        <FormularioInput
+        {/* Campo Nome */}
+        <InputDefault
+          label="Nome"
+          id="nome"
           type="text"
+          placeholder="Digite seu nome"
+          required
+        />
+
+        {/* Campo Cargo */}
+        <InputDefault
+          label="Cargo"
           id="cargo"
+          type="text"
           placeholder="Digite seu cargo"
         />
-        <FormularioLabel htmlFor="imagem">Imagem</FormularioLabel>
-        <FormularioInput
-          type="text"
-          id="imagem"
-          placeholder="Digite o endereço da imagem"
-        />
+
+        {/* Campo Imagem (upload) */}
+        <InputDefault label="Imagem" id="imagem" type="file" accept="image/*" />
+
+        {/* select */}
         <FormularioLabel htmlFor="time">Time</FormularioLabel>
         <FormularioSelect id="time" defaultValue="Selecione o time" required>
           <FormularioOption disabled>Selecione o time</FormularioOption>
@@ -43,10 +50,11 @@ const Formulario = () => {
             Inovação e Gestão
           </FormularioOption>
         </FormularioSelect>
-        <FormularioButton type="submit">Criar Card</FormularioButton>
       </FormularioForm>
     </FormularioContainer>
   );
 };
 
 export default Formulario;
+
+
