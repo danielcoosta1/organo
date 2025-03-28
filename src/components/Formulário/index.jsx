@@ -43,10 +43,10 @@ function Formulario() {
             Inovação e Gestão
           </FormularioOption>
         </FormularioSelect>
-
         <FormularioButton type="submit">Criar Card</FormularioButton>
       </FormularioForm>
     </FormularioContainer>
+    
   );
 }
 

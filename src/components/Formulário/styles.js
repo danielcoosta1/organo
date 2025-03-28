@@ -36,6 +36,7 @@ const FormularioForm = styled.form`
 
 const FormularioLabel = styled.label`
   font-size: 0.75rem;
+  font-weight: 600;
   margin-bottom: 0.25rem;
 
   @media screen and (max-width: 768px) {
@@ -48,8 +49,8 @@ const FormularioInput = styled.input`
   background: #ffffff;
   mix-blend-mode: normal;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+  border: none;
   padding: 1rem 1.5rem;
-  mix-blend-mode: normal;
   &::placeholder {
     color: #afafaf;
     font-size: 0.75rem;
@@ -63,10 +64,10 @@ const FormularioInput = styled.input`
 const FormularioSelect = styled.select`
   margin-bottom: 1rem;
   background: #ffffff;
-
+  mix-blend-mode: normal;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  padding:1rem 1.5rem;
-
+  padding: 1rem 1.5rem;
+  border: none;
   font-size: 0.75rem;
 
   /* Estilo do select em si */
@@ -92,11 +93,10 @@ const FormularioButton = styled.button`
   padding: 1rem 1.5rem;
   border: none;
 
-  font-family: 'Montserrat';
-  font-size:1rem;
-  
-  line-height: 24px;
+  font-family: "Montserrat";
+  font-size: 1rem;
 
+  line-height: 24px;
 
   color: #ffffff;
 
