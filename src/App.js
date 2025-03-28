@@ -1,11 +1,12 @@
 import Banner from "./components/Banner/index";
-
+import Formulario from "./components/Formulário";
 
 function App() {
   return (
-    
-    <Banner />
-   
+    <div>
+      <Banner />
+      <Formulario />
+    </div>
   );
 }
 
