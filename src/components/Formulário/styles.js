@@ -50,6 +50,16 @@ const FormularioButton = styled.button`
 
   color: #ffffff;
 
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media screen and (max-width: 768px) {
     font-size: 0.6rem;
     padding: 0.5rem 1rem;
