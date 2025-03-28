@@ -5,6 +5,7 @@ import {
   FormularioLabel,
   FormularioSelect,
   FormularioOption,
+  FormularioButton,
 } from "./styles";
 
 import InputDefault from "../InputDefault";
@@ -22,7 +23,7 @@ const Formulario = () => {
           id="nome"
           type="text"
           placeholder="Digite seu nome"
-          required
+          required 
         />
 
         {/* Campo Cargo */}
@@ -50,6 +51,7 @@ const Formulario = () => {
             Inovação e Gestão
           </FormularioOption>
         </FormularioSelect>
+        <FormularioButton>Criar card</FormularioButton>
       </FormularioForm>
     </FormularioContainer>
   );

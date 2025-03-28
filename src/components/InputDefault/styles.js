@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const FormularioLabel = styled.label`
   font-size: 0.75rem;
   font-weight: 600;
@@ -10,8 +9,6 @@ const FormularioLabel = styled.label`
     font-size: 0.6rem;
   }
 `;
-
-
 
 const FormularioInput = styled.input`
   margin-bottom: 1rem;
