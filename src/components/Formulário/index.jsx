@@ -2,13 +2,11 @@ import {
   FormularioContainer,
   FormularioTitle,
   FormularioForm,
-  FormularioLabel,
-  FormularioSelect,
-  FormularioOption,
   FormularioButton,
 } from "./styles";
 
 import InputDefault from "../InputDefault";
+import ListaSupensa from "../ListaSupensa";
 
 const Formulario = () => {
   return (
@@ -43,19 +41,13 @@ const Formulario = () => {
         />
 
         {/* select */}
-        <FormularioLabel htmlFor="time">Time</FormularioLabel>
-        <FormularioSelect id="time" defaultValue="Selecione o time" required>
-          <FormularioOption disabled>Selecione o time</FormularioOption>
-          <FormularioOption value="programacao">Programação</FormularioOption>
-          <FormularioOption value="front-end">Front-End</FormularioOption>
-          <FormularioOption value="datascience">Data Science</FormularioOption>
-          <FormularioOption value="devops">Devops</FormularioOption>
-          <FormularioOption value="ux-design">UX e Design</FormularioOption>
-          <FormularioOption value="mobile">Mobile</FormularioOption>
-          <FormularioOption value="inovacao-gestao">
-            Inovação e Gestão
-          </FormularioOption>
-        </FormularioSelect>
+
+        <ListaSupensa
+          label="Time"
+          id="time"
+          defaultValue="Escolha seu time"
+        ></ListaSupensa>
+
         <FormularioButton>Criar card</FormularioButton>
       </FormularioForm>
     </FormularioContainer>
