@@ -2,7 +2,16 @@ import BannerImg from "../../assets/banner.png";
 import { Header, Img } from "./styles.js";
 
 
-function Banner() {
+// function Banner() {
+//   return (
+//     <Header>
+//       <Img src={BannerImg} alt="Banner" />
+//     </Header>
+//   );
+// }
+
+
+const Banner = () => {
   return (
     <Header>
       <Img src={BannerImg} alt="Banner" />

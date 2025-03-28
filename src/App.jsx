@@ -1,7 +1,7 @@
 import Banner from "./components/Banner/index";
 import Formulario from "./components/Formulário";
 
-function App() {
+const App = () => {
   return (
     <div>
       <Banner />

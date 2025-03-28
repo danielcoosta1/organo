@@ -9,7 +9,7 @@ import {
   FormularioButton,
 } from "./styles";
 
-function Formulario() {
+const Formulario = () => {
   return (
     <FormularioContainer>
       <FormularioTitle>
@@ -46,8 +46,7 @@ function Formulario() {
         <FormularioButton type="submit">Criar Card</FormularioButton>
       </FormularioForm>
     </FormularioContainer>
-    
   );
-}
+};
 
 export default Formulario;
