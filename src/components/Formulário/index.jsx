@@ -23,7 +23,7 @@ const Formulario = () => {
           id="nome"
           type="text"
           placeholder="Digite seu nome"
-          required 
+          required
         />
 
         {/* Campo Cargo */}
@@ -35,7 +35,12 @@ const Formulario = () => {
         />
 
         {/* Campo Imagem (upload) */}
-        <InputDefault label="Imagem" id="imagem" type="file" accept="image/*" />
+        <InputDefault
+          label="Imagem"
+          id="imagem"
+          type="text"
+          placeholder="Digite a URL da imagem"
+        />
 
         {/* select */}
         <FormularioLabel htmlFor="time">Time</FormularioLabel>
@@ -45,9 +50,9 @@ const Formulario = () => {
           <FormularioOption value="front-end">Front-End</FormularioOption>
           <FormularioOption value="datascience">Data Science</FormularioOption>
           <FormularioOption value="devops">Devops</FormularioOption>
-          <FormularioOption value="uxd&design">UX e Design</FormularioOption>
+          <FormularioOption value="ux-design">UX e Design</FormularioOption>
           <FormularioOption value="mobile">Mobile</FormularioOption>
-          <FormularioOption value="inovacao&gestao">
+          <FormularioOption value="inovacao-gestao">
             Inovação e Gestão
           </FormularioOption>
         </FormularioSelect>
@@ -58,5 +63,3 @@ const Formulario = () => {
 };
 
 export default Formulario;
-
-
