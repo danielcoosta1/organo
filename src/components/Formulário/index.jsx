@@ -34,7 +34,7 @@ const Formulario = () => {
           placeholder="Digite seu cargo"
         />
 
-        {/* Campo Imagem (upload) */}
+        {/* Campo Imagem*/}
         <InputDefault
           label="Imagem"
           id="imagem"
