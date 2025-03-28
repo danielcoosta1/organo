@@ -50,14 +50,14 @@ const FormularioInput = styled.input`
   mix-blend-mode: normal;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
   border: none;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   &::placeholder {
     color: #afafaf;
     font-size: 0.75rem;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
   }
 `;
 
@@ -66,7 +66,7 @@ const FormularioSelect = styled.select`
   background: #ffffff;
   mix-blend-mode: normal;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 2rem;
   border: none;
   font-size: 0.75rem;
 
@@ -78,7 +78,7 @@ const FormularioSelect = styled.select`
   }
 
   @media screen and (max-width: 768px) {
-    padding: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
   }
 `;
 
