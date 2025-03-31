@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 const TimeConteiner = styled.section`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   padding: 24px;
   max-width: 75rem;
