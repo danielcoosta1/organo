@@ -9,7 +9,7 @@ const InputDefault = ({ label, id, type, ...props }) => {
   return (
     <>
       <FormularioLabel htmlFor={id}>{label}</FormularioLabel>
-      <FormularioInput required id={id} type={type} {...props} />
+      <FormularioInput  id={id} type={type} {...props} />
     </>
   );
 };

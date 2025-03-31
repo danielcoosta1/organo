@@ -1,10 +1,16 @@
 import { CardDiv, CabecalhoDiv, Img, RodapeDiv } from "./styles";
-
-const Card = ({ nome, cargo, imagem, corDeFundo }) => {
+import avatar from "../../assets/avatar-padrao.webp";
+const Card = ({ nome, cargo, imagem, corDeFundo,time }) => {
   return (
     <CardDiv>
       <CabecalhoDiv style={{ backgroundColor: corDeFundo }}>
-        <Img src={imagem} alt={nome} />
+        <Img
+          src={imagem || avatar}
+          alt={`Foto de ${nome}, ${cargo} no time ${time}`}
+          onError={(e) => {
+            e.target.src = avatar // Se a imagem falhar
+          }}
+        />
       </CabecalhoDiv>
       <RodapeDiv>
         <h4>{nome}</h4>
