@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const CardDiv = styled.div`
   width: 280px;
+ 
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -35,6 +36,7 @@ const RodapeDiv = styled.div`
   background: #ffffff;
   border-radius: 0 0 10px 10px;
   text-align: center;
+  
 
   h4 {
     color: #6278f7;

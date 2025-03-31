@@ -25,7 +25,17 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (!formData.time) {
+      // Verifica se todas chaves estão preenchidas
+      alert("Selecione um time!");
+      return;
+    }
+    if (formData.cargo.length < 3) {
+      alert("Cargo muito curto!");
+    }
+
     aoColaboradorCadastrado(formData);
+
     setFormData({
       // Reseta o formulário
       nome: "",
@@ -48,6 +58,7 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
           id="nome"
           type="text"
           placeholder="Digite seu nome"
+          value={formData.nome}
         />
 
         {/* Campo Cargo */}
@@ -57,6 +68,7 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
           id="cargo"
           type="text"
           placeholder="Digite seu cargo"
+          value={formData.cargo}
         />
 
         {/* Campo Imagem*/}
@@ -65,7 +77,8 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
           label="Imagem"
           id="imagem"
           type="text"
-          placeholder="Digite a URL da imagem"
+          placeholder="(ex: /assets/seu-nome.webp)"
+          value={formData.imagem}
         />
 
         {/* select */}

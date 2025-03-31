@@ -7,7 +7,7 @@ const TimeConteiner = styled.section`
   flex-direction: column;
   gap: 24px;
   padding: 24px;
-  max-width: 75rem;
+  max-width: 90rem;
   margin: 0 auto;
 `;
 

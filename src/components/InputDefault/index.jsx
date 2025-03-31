@@ -1,6 +1,6 @@
 import { FormularioInput, FormularioLabel } from "./styles";
 
-const InputDefault = ({ label, id, type, ...props }) => {
+const InputDefault = ({ value, label, id, type, ...props }) => {
 
   
 
@@ -9,7 +9,7 @@ const InputDefault = ({ label, id, type, ...props }) => {
   return (
     <>
       <FormularioLabel htmlFor={id}>{label}</FormularioLabel>
-      <FormularioInput  id={id} type={type} {...props} />
+      <FormularioInput value={value} id={id} type={type} {...props} />
     </>
   );
 };
