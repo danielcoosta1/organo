@@ -1,12 +1,13 @@
 import Card from "../Card";
 import { DivCards, DivTime } from "./styles";
 
-const Time = ({ nome, corPrimaria, corSecundaria, colaboradores,  }) => {
-    return (
+const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
+  return (
+    colaboradores.length > 0 && (
       <DivTime style={{ backgroundColor: corSecundaria }}>
         <h2 style={{ borderColor: corPrimaria }}>{nome}</h2>
         <DivCards>
-          {colaboradores.map(colaborador => (
+          {colaboradores.map((colaborador) => (
             <Card
               key={colaborador.nome}
               nome={colaborador.nome}
@@ -18,7 +19,8 @@ const Time = ({ nome, corPrimaria, corSecundaria, colaboradores,  }) => {
           ))}
         </DivCards>
       </DivTime>
-    );
-  };
-  
-  export default Time;
+    )
+  );
+};
+
+export default Time;

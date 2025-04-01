@@ -19,6 +19,7 @@ const App = () => {
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
   };
+
   return (
     <div>
       <Banner />
@@ -39,11 +40,12 @@ const App = () => {
             colaboradores={colaboradores.filter(
               (col) => col.time === time.nome
             )}
+           
           />
         ))}
       </TimeConteiner>
 
-      
+
     </div>
   );
 };
