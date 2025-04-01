@@ -1,12 +1,13 @@
 import Banner from "./components/Banner/index";
 import Formulario from "./components/Formulário";
+import Rodape from "./components/Rodapé";
 import Time from "./components/Time";
 import { TimeConteiner, Titulo } from "./Styles";
 import { useState } from "react";
 
 const App = () => {
   const [colaboradores, setColaboradores] = useState([]);
-
+ 
   const times = [
     { nome: "Programação", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
     { nome: "Front-End", corPrimaria: "#82CFFA", corSecundaria: "#E8F8FF" },
@@ -44,6 +45,7 @@ const App = () => {
           />
         ))}
       </TimeConteiner>
+      <Rodape />
 
 
     </div>
