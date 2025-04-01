@@ -90,7 +90,7 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
           onChange={handleChange} // Mesma função que os outros inputs
           options={times}
         />
-        <div></div>
+        
         {/* button */}
 
         <FormularioButton type="submit">Criar card</FormularioButton>

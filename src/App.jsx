@@ -18,6 +18,7 @@ const App = () => {
   ];
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
+    debugger
     setColaboradores([...colaboradores, colaborador]);
   };
 
