@@ -1,12 +1,30 @@
 import Card from "../Card";
 
+import { useState, useEffect } from "react";
+import { DivCards, DivTime, InputColor } from "./styles";
 
-import { DivCards, DivTime } from "./styles";
+const Time = ({
+  nome,
+  corPrimaria,
+  corSecundaria,
+  colaboradores,
+  aoDeletar,
+}) => {
+  const [corDeFundo, setCorDeFundo] = useState(corSecundaria);
 
-const Time = ({ nome, corPrimaria, corSecundaria, colaboradores, aoDeletar }) => {
+  useEffect(() => {
+    setCorDeFundo(corSecundaria);
+  }, [corSecundaria]);
+
+  const handleChange = (e) => {
+    const corAtual = e.target.value;
+    setCorDeFundo(corAtual);
+  };
+
   return (
     colaboradores.length > 0 && (
-      <DivTime style={{ backgroundColor: corSecundaria }}>
+      <DivTime style={{ backgroundColor: corDeFundo }}>
+        <InputColor type="color" onChange={handleChange} value={corDeFundo} />
         <h2 style={{ borderColor: corPrimaria }}>{nome}</h2>
         <DivCards>
           {colaboradores.map((colaborador) => (
@@ -26,13 +44,5 @@ const Time = ({ nome, corPrimaria, corSecundaria, colaboradores, aoDeletar }) =>
     )
   );
 };
-
-
-
-
-
-
-
-
 
 export default Time;

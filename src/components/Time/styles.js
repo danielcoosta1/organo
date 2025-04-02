@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const DivTime = styled.div`
-  
+
+  position: relative;
   text-align: center;
   padding: 32px;
   margin: 16px;
@@ -24,4 +25,10 @@ const DivCards = styled.div`
   margin-top: 20px;
 `;
 
-export { DivCards, DivTime };
+const InputColor = styled.input`
+  position: absolute;
+  top: 20px;
+  right: 50px;
+`;
+
+export { DivCards, DivTime, InputColor };
