@@ -1,4 +1,6 @@
 import Card from "../Card";
+
+
 import { DivCards, DivTime } from "./styles";
 
 const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
@@ -22,5 +24,13 @@ const Time = ({ nome, corPrimaria, corSecundaria, colaboradores }) => {
     )
   );
 };
+
+
+
+
+
+
+
+
 
 export default Time;

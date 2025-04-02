@@ -1,6 +1,9 @@
 import { CardDiv, CabecalhoDiv, Img, RodapeDiv } from "./styles";
 import avatar from "../../assets/avatar-padrao.webp";
-const Card = ({ nome, cargo, imagem, corDeFundo,time }) => {
+
+import PropTypes from "prop-types";
+
+const Card = ({ nome, cargo, imagem, corDeFundo, time }) => {
   return (
     <CardDiv>
       <CabecalhoDiv style={{ backgroundColor: corDeFundo }}>
@@ -8,7 +11,7 @@ const Card = ({ nome, cargo, imagem, corDeFundo,time }) => {
           src={imagem || avatar}
           alt={`Foto de ${nome}, ${cargo} no time ${time}`}
           onError={(e) => {
-            e.target.src = avatar // Se a imagem falhar
+            e.target.src = avatar; // Se a imagem falhar
           }}
         />
       </CabecalhoDiv>
@@ -18,6 +21,16 @@ const Card = ({ nome, cargo, imagem, corDeFundo,time }) => {
       </RodapeDiv>
     </CardDiv>
   );
+};
+Card.propTypes = {
+  nome: PropTypes.string.isRequired,
+  cargo: PropTypes.string.isRequired,
+  imagem: PropTypes.string,
+  time: PropTypes.string.isRequired,
+};
+
+Card.defaultProps = {
+  imagem: avatar,
 };
 
 export default Card;
