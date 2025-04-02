@@ -17,11 +17,11 @@ const BotaoDeletar = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #ff0000;
+  color: #696969;
   transition: all 0.3s;
 
   &:hover {
-    color: #cc0000;
+    color: #DCDCDC;
     transform: scale(1.1);
   }
 
