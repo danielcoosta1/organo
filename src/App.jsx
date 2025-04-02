@@ -7,7 +7,7 @@ import { useState } from "react";
 
 const App = () => {
   const [colaboradores, setColaboradores] = useState([]);
- 
+
   const times = [
     { nome: "Programação", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
     { nome: "Front-End", corPrimaria: "#82CFFA", corSecundaria: "#E8F8FF" },
@@ -18,8 +18,11 @@ const App = () => {
   ];
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    debugger
-    setColaboradores([...colaboradores, colaborador]);
+    setColaboradores([...colaboradores, { ...colaborador, id: Date.now() }]);
+  };
+
+  const deletarColaborador = (id) => {
+    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id));
   };
 
   return (
@@ -42,13 +45,11 @@ const App = () => {
             colaboradores={colaboradores.filter(
               (col) => col.time === time.nome
             )}
-           
+            aoDeletar={deletarColaborador}
           />
         ))}
       </TimeConteiner>
       <Rodape />
-
-
     </div>
   );
 };

@@ -1,12 +1,33 @@
 import styled from "styled-components";
 
 const CardDiv = styled.div`
+  position: relative;
   width: 280px;
- 
+
   margin: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   display: inline-block;
+`;
+
+const BotaoDeletar = styled.button`
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff0000;
+  transition: all 0.3s;
+
+  &:hover {
+    color: #cc0000;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
 `;
 
 const CabecalhoDiv = styled.div`
@@ -18,10 +39,6 @@ const CabecalhoDiv = styled.div`
 
   transition: all 0.3s ease;
 
-  &:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  }
 `;
 
 const Img = styled.img`
@@ -36,7 +53,6 @@ const RodapeDiv = styled.div`
   background: #ffffff;
   border-radius: 0 0 10px 10px;
   text-align: center;
-  
 
   h4 {
     color: #6278f7;
@@ -51,4 +67,4 @@ const RodapeDiv = styled.div`
   }
 `;
 
-export { CardDiv, CabecalhoDiv, Img, RodapeDiv };
+export { CardDiv, CabecalhoDiv, Img, RodapeDiv, BotaoDeletar };
