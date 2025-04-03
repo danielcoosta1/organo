@@ -2,8 +2,11 @@ import Banner from "./components/Banner/index";
 import Formulario from "./components/Formulário";
 import Rodape from "./components/Rodapé";
 import Time from "./components/Time";
+
 import { TimeConteiner, Titulo } from "./Styles";
+
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 const App = () => {
   const [colaboradores, setColaboradores] = useState([]);
@@ -25,7 +28,9 @@ const App = () => {
   };
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    setColaboradores([...colaboradores, { ...colaborador, id: Date.now() }]);
+    
+    setColaboradores([...colaboradores, { ...colaborador, id: uuidv4() }]);
+
   };
 
   const deletarColaborador = (id) => {
