@@ -21,6 +21,9 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
   const handleChange = (e) => {
     const { id, value } = e.target;
     setFormData((formData) => ({ ...formData, [id]: value }));
+    //  e.target.id = time /  e.target.value = "Programação"
+    //  =>  ex: [time] : "Programação" -
+    //  o id tem que ser igual a chave do formData
   };
 
   const handleSubmit = (event) => {
@@ -90,7 +93,7 @@ const Formulario = ({ aoColaboradorCadastrado, times }) => {
           onChange={handleChange} // Mesma função que os outros inputs
           options={times}
         />
-        
+
         {/* button */}
 
         <FormularioButton type="submit">Criar card</FormularioButton>
