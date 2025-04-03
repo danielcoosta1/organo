@@ -5,7 +5,7 @@ Uma aplicação React para gerenciar times e colaboradores de forma dinâmica, c
 ![Preview da Aplicação](https://github.com/danielcoosta1/organo/blob/develop-part-2/src/assets/exemplo-readme.PNG?raw=true)  
 
 
-## Design do projeto no figma:
+## 🎨 Design do projeto no figma:
 
 [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/design/I2VbfO1jO5zzQfBbQrFsjd/React--desenvolvendo-com-JavaScript-%7C-Organo--Community-?node-id=134-128&p=f&t=6L3ERwsDShHoA39b-0)
 
