@@ -1,12 +1,25 @@
 import styled from "styled-components";
 
+const Main = styled.section`
+  display: flex;
+  gap: 50px;
+  max-width: 100rem;
+  margin: 0 auto;
+
+  
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+  @media screen and (max-width: 420px) {
+   
+  }
+`;
+
 const FormularioContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
   padding: 5rem 10rem;
-  max-width: 60rem;
-  margin: 0 auto;
 
   margin-top: 5rem;
 
@@ -44,7 +57,7 @@ const FormularioForm = styled.form`
 `;
 
 const FormularioButton = styled.button`
-  width: 20%;
+  width: 40%;
   background: #6278f7;
   mix-blend-mode: normal;
   border-radius: 10px;
@@ -87,4 +100,5 @@ export {
   FormularioTitle,
   FormularioForm,
   FormularioButton,
+  Main
 };
