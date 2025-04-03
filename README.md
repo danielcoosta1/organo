@@ -2,8 +2,8 @@
 
 Uma aplicação React para gerenciar times e colaboradores de forma dinâmica, com personalização de cores e funcionalidades interativas.
 
-![Preview da Aplicação](https://via.placeholder.com/800x500.png?text=Preview+da+Aplica%C3%A7%C3%A3o)  
-_(Substitua por um screenshot real do seu projeto)_
+![Preview da Aplicação](https://github.com/danielcoosta1/organo/blob/develop-part-2/src/assets/exemplo-readme.PNG?raw=true)  
+
 
 ## ✨ Funcionalidades Principais
 
