@@ -9,6 +9,8 @@ const Time = ({
   colaboradores,
   aoDeletar,
   atualizaCor,
+  aoFavoritar
+  
 }) => {
   const handleChange = (e) => {
     const novaCor = e.target.value;
@@ -23,6 +25,7 @@ const Time = ({
         <DivCards>
           {colaboradores.map((colaborador) => (
             <Card
+              favorito={colaborador.favorito}
               id={colaborador.id}
               key={colaborador.id}
               nome={colaborador.nome}
@@ -31,6 +34,7 @@ const Time = ({
               time={colaborador.time}
               corDeFundo={corPrimaria}
               aoDeletar={aoDeletar}
+              aoFavoritar={aoFavoritar}
             />
           ))}
         </DivCards>

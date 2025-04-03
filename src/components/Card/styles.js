@@ -21,7 +21,25 @@ const BotaoDeletar = styled.button`
   transition: all 0.3s;
 
   &:hover {
-    color: #DCDCDC;
+    color: #dcdcdc;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+`;
+
+const BotaoFavorito = styled.button`
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
     transform: scale(1.1);
   }
 
@@ -38,7 +56,6 @@ const CabecalhoDiv = styled.div`
   align-items: center;
 
   transition: all 0.3s ease;
-
 `;
 
 const Img = styled.img`
@@ -67,4 +84,4 @@ const RodapeDiv = styled.div`
   }
 `;
 
-export { CardDiv, CabecalhoDiv, Img, RodapeDiv, BotaoDeletar };
+export { CardDiv, CabecalhoDiv, Img, RodapeDiv, BotaoDeletar, BotaoFavorito };

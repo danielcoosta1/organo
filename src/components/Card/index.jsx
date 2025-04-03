@@ -1,14 +1,42 @@
-import { CardDiv, CabecalhoDiv, Img, RodapeDiv, BotaoDeletar } from "./styles";
+import {
+  CardDiv,
+  CabecalhoDiv,
+  Img,
+  RodapeDiv,
+  BotaoDeletar,
+  BotaoFavorito,
+  
+} from "./styles";
+
 import avatar from "../../assets/avatar-padrao.webp";
-import { FaTrashAlt } from "react-icons/fa";
+
+import { FaTrashAlt, FaStar, FaRegStar } from "react-icons/fa";
+
 import PropTypes from "prop-types";
 
-const Card = ({ nome, cargo, imagem, corDeFundo, time, id, aoDeletar }) => {
+const Card = ({
+  nome,
+  cargo,
+  imagem,
+  corDeFundo,
+  time,
+  id,
+  aoDeletar,
+  aoFavoritar,
+  favorito,
+}) => {
   return (
     <CardDiv>
       <BotaoDeletar onClick={() => aoDeletar(id)}>
         <FaTrashAlt size={20} />
       </BotaoDeletar>
+      <BotaoFavorito onClick={()=> aoFavoritar(id)}>
+        {favorito ? (
+          <FaStar color="#FFD700" size={24} />
+        ): (
+          <FaRegStar color="#FFD700" size={24} />
+        )}
+      </BotaoFavorito>
       <CabecalhoDiv style={{ backgroundColor: corDeFundo }}>
         <Img
           src={imagem || avatar}
