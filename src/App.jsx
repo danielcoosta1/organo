@@ -61,7 +61,7 @@ const App = () => {
   };
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    setColaboradores([...colaboradores, { ...colaborador, id: uuidv4() }]);
+    setColaboradores([...colaboradores, { ...colaborador, id: uuidv4(), favorito: false }]);
   };
 
   const deletarColaborador = (id) => {
@@ -69,6 +69,14 @@ const App = () => {
       colaboradores.filter((colaborador) => colaborador.id !== id)
     );
   };
+
+  const toggleFavorito=(id) =>{
+    setColaboradores(colaboradores.map(colaborador=>
+      colaborador.id === id
+      ? {...colaborador, favorito: !colaborador.favorito}
+      : colaborador
+    ));
+  }
 
   return (
     <div>
@@ -95,6 +103,7 @@ const App = () => {
             )}
             aoDeletar={deletarColaborador}
             atualizaCor={atualizarCorTime}
+            aoFavoritar={toggleFavorito}
           />
         ))}
       </TimeConteiner>
