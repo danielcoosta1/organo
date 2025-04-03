@@ -1,6 +1,5 @@
 import Card from "../Card";
 
-import { useState, useEffect } from "react";
 import { DivCards, DivTime, InputColor } from "./styles";
 
 const Time = ({
@@ -9,22 +8,17 @@ const Time = ({
   corSecundaria,
   colaboradores,
   aoDeletar,
+  atualizaCor,
 }) => {
-  const [corDeFundo, setCorDeFundo] = useState(corSecundaria);
-
-  useEffect(() => {
-    setCorDeFundo(corSecundaria);
-  }, [corSecundaria]);
-
   const handleChange = (e) => {
-    const corAtual = e.target.value;
-    setCorDeFundo(corAtual);
+    const novaCor = e.target.value;
+    atualizaCor(nome, novaCor);
   };
 
   return (
     colaboradores.length > 0 && (
-      <DivTime style={{ backgroundColor: corDeFundo }}>
-        <InputColor type="color" onChange={handleChange} value={corDeFundo} />
+      <DivTime style={{ backgroundColor: corSecundaria }}>
+        <InputColor type="color" onChange={handleChange} value={corSecundaria} />
         <h2 style={{ borderColor: corPrimaria }}>{nome}</h2>
         <DivCards>
           {colaboradores.map((colaborador) => (

@@ -7,22 +7,31 @@ import { useState } from "react";
 
 const App = () => {
   const [colaboradores, setColaboradores] = useState([]);
-
-  const times = [
+  const [times, setTimes] = useState([
+    // ✅ Estado gerenciado
     { nome: "Programação", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
-    { nome: "Front-End", corPrimaria: "#82CFFA", corSecundaria: "#E8F8FF" },
     { nome: "Data Science", corPrimaria: "#A6D157", corSecundaria: "#F0F8E2" },
     { nome: "DevOps", corPrimaria: "#E06B69", corSecundaria: "#FDE7E8" },
     { nome: "UX e Design", corPrimaria: "#DB6EBF", corSecundaria: "#FAE9F5" },
     { nome: "Mobile", corPrimaria: "#FFBA05", corSecundaria: "#FFF5D9" },
-  ];
+  ]);
+
+  const atualizarCorTime = (nomeTime, novaCor) => {
+    setTimes(
+      times.map((time) =>
+        time.nome === nomeTime ? { ...time, corSecundaria: novaCor } : time
+      )
+    );
+  };
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, { ...colaborador, id: Date.now() }]);
   };
 
   const deletarColaborador = (id) => {
-    setColaboradores(colaboradores.filter(colaborador => colaborador.id !== id));
+    setColaboradores(
+      colaboradores.filter((colaborador) => colaborador.id !== id)
+    );
   };
 
   return (
@@ -46,6 +55,7 @@ const App = () => {
               (col) => col.time === time.nome
             )}
             aoDeletar={deletarColaborador}
+            atualizaCor={atualizarCorTime}
           />
         ))}
       </TimeConteiner>
