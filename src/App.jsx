@@ -12,12 +12,41 @@ const App = () => {
   const [colaboradores, setColaboradores] = useState([]);
   const [times, setTimes] = useState([
     // ✅ Estado gerenciado
-    { nome: "Programação", corPrimaria: "#57C278", corSecundaria: "#D9F7E9" },
-    { nome: "Data Science", corPrimaria: "#A6D157", corSecundaria: "#F0F8E2" },
-    { nome: "DevOps", corPrimaria: "#E06B69", corSecundaria: "#FDE7E8" },
-    { nome: "UX e Design", corPrimaria: "#DB6EBF", corSecundaria: "#FAE9F5" },
-    { nome: "Mobile", corPrimaria: "#FFBA05", corSecundaria: "#FFF5D9" },
+    {
+      id: uuidv4(),
+      nome: "Programação",
+      corPrimaria: "#57C278",
+      corSecundaria: "#D9F7E9",
+    },
+    {
+      id: uuidv4(),
+      nome: "Data Science",
+      corPrimaria: "#A6D157",
+      corSecundaria: "#F0F8E2",
+    },
+    {
+      id: uuidv4(),
+      nome: "DevOps",
+      corPrimaria: "#E06B69",
+      corSecundaria: "#FDE7E8",
+    },
+    {
+      id: uuidv4(),
+      nome: "UX e Design",
+      corPrimaria: "#DB6EBF",
+      corSecundaria: "#FAE9F5",
+    },
+    {
+      id: uuidv4(),
+      nome: "Mobile",
+      corPrimaria: "#FFBA05",
+      corSecundaria: "#FFF5D9",
+    },
   ]);
+
+  const aoNovoTimeAdicionado = (novoTime) => {
+    setTimes([...times, { ...novoTime, id: uuidv4() }]);
+  };
 
   const atualizarCorTime = (nomeTime, novaCor) => {
     setTimes(
@@ -28,9 +57,7 @@ const App = () => {
   };
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
-    
     setColaboradores([...colaboradores, { ...colaborador, id: uuidv4() }]);
-
   };
 
   const deletarColaborador = (id) => {
@@ -44,7 +71,9 @@ const App = () => {
       <Banner />
       <Formulario
         aoColaboradorCadastrado={aoNovoColaboradorAdicionado}
-        times={times.map((time) => time.nome)} // Passa apenas os nomes dos times
+        times={times}
+        aoTimeCadastrado={aoNovoTimeAdicionado}
+        // Passa apenas os nomes dos times
       />
       <Titulo>
         <h1>Minha Organização</h1>
@@ -52,6 +81,7 @@ const App = () => {
       <TimeConteiner>
         {times.map((time) => (
           <Time
+            id={time.id}
             key={time.nome}
             nome={time.nome}
             corPrimaria={time.corPrimaria}
