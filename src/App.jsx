@@ -45,6 +45,10 @@ const App = () => {
   ]);
 
   const aoNovoTimeAdicionado = (novoTime) => {
+    if (times.some((time) => time.nome === novoTime.nome)) {
+      alert("Já existe um time com esse nome!");
+      return;
+    }
     setTimes([...times, { ...novoTime, id: uuidv4() }]);
   };
 
